@@ -31,7 +31,7 @@ public class Json{
   }
   
   public static Json from(String json){
-    return new JsonReader(json).parse();
+    return source==null?new Json():new JsonReader(json).parse();
   }
 
   public boolean isArray(){
